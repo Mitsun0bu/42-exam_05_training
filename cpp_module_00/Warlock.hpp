@@ -17,8 +17,8 @@ class Warlock
 
 	private:
 
-					Warlock(Warlock const & src);
 					Warlock(void);
+					Warlock(Warlock const & src);
 		Warlock&	operator=(Warlock const & src);
 		std::string	name;
 		std::string	title;
