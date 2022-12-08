@@ -1,7 +1,7 @@
 # include "Fwoosh.hpp"
 
 Fwoosh::Fwoosh(void):
-	name("Fwoosh"), effects("fwooshed")
+	ASpell("Fwoosh", "fwooshed")
 {
 	return ;
 };
