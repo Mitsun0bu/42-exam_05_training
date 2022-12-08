@@ -9,18 +9,24 @@ class ATarget;
 class ASpell
 {
 	public:
+		// CONSTRUCTORS
 						ASpell(void);
 						ASpell(std::string name, std::string effects);
-						~ASpell(void);
+		// COPY	CONSTRUCTOR
 						ASpell(ASpell const & src);
-		void			operator=(ASpell const & src);
+		// '=' OPERATOR OVERLAOD
+		ASpell&			operator=(ASpell const & src);
+		// DESTRUCTOR
+						~ASpell(void);
+		// GETTERS
 		std::string		getName(void) const;
 		std::string		getEffects(void) const;
+		// METHODS
 		virtual ASpell*	clone(void) = 0;
 		void			launch(ATarget const & target);
 
 	protected:
-
+		// PRIVATE ATTRIBUTES
 		std::string		name;
 		std::string		effects;
 };
