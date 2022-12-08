@@ -26,7 +26,7 @@ class ASpell
 		void			launch(ATarget const & target);
 
 	protected:
-		// PRIVATE ATTRIBUTES
+		// PROTECTED ATTRIBUTES
 		std::string		name;
 		std::string		effects;
 };

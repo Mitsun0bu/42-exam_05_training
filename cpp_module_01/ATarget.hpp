@@ -9,15 +9,24 @@ class ASpell;
 class ATarget
 {
 	public:
+		// CONSTRUCTORS
 							ATarget(void);
 							ATarget(std::string type);
-							~ATarget(void);
+		// COPY	CONSTRUCTOR
 							ATarget(ATarget const & src);
-		void				operator=(ATarget const & src);
-		std::string			type; // NEED TO BE PRIVATE ???
-		std::string&		getType() const;
+		// '=' OPERATOR OVERLAOD
+		ATarget&			operator=(ATarget const & src);
+		// DESTRUCTOR
+							~ATarget(void);
+		// GETTER
+		const std::string&	getType(void) const;
+		// METHODS
 		virtual ATarget*	clone(void) = 0;
-		void				getHitBySpell(ASpell const & spell);
+		void				getHitBySpell(ASpell const & spell) const;
+
+	private:
+		// PRIVATE ATTRIBUTE
+		std::string	type;
 };
 
 # endif

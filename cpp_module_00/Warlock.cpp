@@ -4,14 +4,18 @@
 Warlock::Warlock(std::string name, std::string title):
 	name(name), title(title)
 {
-	std::cout << this->name << ": This looks like another boring day." << std::endl;
+	std::cout
+	<< this->name << ": This looks like another boring day."
+	<< std::endl;
 	return ;
 }
 
 // DESTRUCTOR
 Warlock::~Warlock(void)
 {
-	std::cout << this->name << ": My job here is done!" << std::endl;
+	std::cout
+	<< this->name << ": My job here is done!"
+	<< std::endl;
 	return ;
 }
 
@@ -36,7 +40,10 @@ void	Warlock::setTitle(const std::string& title)
 // METHOD
 void	Warlock::introduce(void) const
 {
-	std::cout << this->name << ": I am " << this->name << ", " << title << std::endl;
+	std::cout
+	<< this->name << ": I am " << this->name
+	<< ", " << title
+	<< std::endl;
 	return ;
 }
 

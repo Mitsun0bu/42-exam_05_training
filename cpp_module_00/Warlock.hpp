@@ -12,8 +12,8 @@ class Warlock
 		// DESTRUCTOR
 					~Warlock(void);
 		// GETTERS
-		std::string	getName(void)	const;
-		std::string	getTitle(void)	const;
+		std::string	getName(void) const;
+		std::string	getTitle(void) const;
 		// SETTERS
 		void		setTitle(const std::string& title);
 		// METHOD

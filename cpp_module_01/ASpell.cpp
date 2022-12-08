@@ -1,4 +1,5 @@
 # include "ASpell.hpp"
+# include "ATarget.hpp"
 
 // CONSTRUCTORS
 ASpell::ASpell(void)
@@ -47,5 +48,6 @@ std::string	ASpell::getEffects(void) const
 // METHOD
 void	ASpell::launch(ATarget const & target)
 {
+	target.getHitBySpell(*this);
 	return ;
 }
