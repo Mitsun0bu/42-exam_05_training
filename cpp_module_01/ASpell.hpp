@@ -25,10 +25,10 @@ class ASpell
 		virtual ASpell*	clone(void) = 0;
 		void			launch(ATarget const & target);
 
-		std::string		name;
-		std::string		effects;
 	protected:
 		// PROTECTED ATTRIBUTES
+		std::string		name;
+		std::string		effects;
 };
 
 # endif
