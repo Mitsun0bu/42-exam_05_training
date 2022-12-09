@@ -2,7 +2,7 @@
 
 // CONSTRUCTOR
 Warlock::Warlock(std::string name, std::string title):
-	name(name), title(title), spellBook()
+	name(name), title(title)
 {
 	std::cout
 	<< this->name << ": This looks like another boring day."
@@ -17,6 +17,7 @@ Warlock::~Warlock(void)
 	std::cout
 	<< this->name << ": My job here is done!"
 	<< std::endl;
+
 	return ;
 }
 

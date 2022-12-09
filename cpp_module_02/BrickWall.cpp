@@ -24,7 +24,7 @@ BrickWall&	BrickWall::operator=(BrickWall const & src)
 // METHOD
 BrickWall*	BrickWall::clone(void)
 {
-	BrickWall* BrickWallClone = new BrickWall();
+	BrickWall* BrickWallClone = new BrickWall(*this);
 	return (BrickWallClone);
 }
 

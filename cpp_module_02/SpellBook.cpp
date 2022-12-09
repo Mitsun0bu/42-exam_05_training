@@ -9,6 +9,11 @@ SpellBook::SpellBook(void)
 // DESTRUCTOR
 SpellBook::~SpellBook(void)
 {
+	std::map<std::string, ASpell*>::iterator i;
+
+	for(i = this->spellList.begin(); i != this->spellList.end(); ++i)
+		this->spellList.erase(i->first);
+	this->spellList.clear();
 	return;
 }
 

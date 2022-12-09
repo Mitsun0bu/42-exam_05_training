@@ -25,7 +25,7 @@ Polymorph&	Polymorph::operator=(Polymorph const & src)
 // METHOD
 Polymorph*	Polymorph::clone(void)
 {
-	Polymorph* PolymorphClone = new Polymorph();
+	Polymorph* PolymorphClone = new Polymorph(*this);
 	return (PolymorphClone);
 }
 

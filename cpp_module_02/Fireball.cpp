@@ -25,7 +25,7 @@ Fireball&	Fireball::operator=(Fireball const & src)
 // METHOD
 Fireball*	Fireball::clone(void)
 {
-	Fireball* fireballClone = new Fireball();
+	Fireball* fireballClone = new Fireball(*this);
 	return (fireballClone);
 }
 

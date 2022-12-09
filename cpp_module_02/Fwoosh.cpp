@@ -25,7 +25,7 @@ Fwoosh&	Fwoosh::operator=(Fwoosh const & src)
 // METHOD
 Fwoosh*	Fwoosh::clone(void)
 {
-	Fwoosh* fwooshClone = new Fwoosh();
+	Fwoosh* fwooshClone = new Fwoosh(*this);
 	return (fwooshClone);
 }
 
