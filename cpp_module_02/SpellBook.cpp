@@ -15,12 +15,8 @@ SpellBook::~SpellBook(void)
 // METHODS
 void	SpellBook::learnSpell(ASpell* spell)
 {
-	ASpell* newSpell;
-
-	if (!spell)
-		return ;
-	newSpell = spell;
-	spellList[newSpell->getName()] = newSpell;
+	if (spell)
+		spellList[spell->getName()] = spell->clone();
 	return ;
 }
 
@@ -33,7 +29,7 @@ void	SpellBook::forgetSpell(std::string const & spellName)
 
 ASpell*	SpellBook::createSpell(std::string const & spellName)
 {
-	ASpell* newSpell;
-
-	return (newSpell);
+	if (spellList.find(spellName) != spellList.end())
+		return (spellList[spellName]->clone());
+	return (NULL);
 }
