@@ -22,8 +22,14 @@ Dummy&	Dummy::operator=(Dummy const & src)
 }
 
 // METHOD
-Dummy*	clone(void)
+Dummy*	Dummy::clone(void)
 {
 	Dummy* dummyClone = new Dummy();
 	return (dummyClone);
+}
+
+// METHOD
+Dummy::~Dummy(void)
+{
+	return ;
 }

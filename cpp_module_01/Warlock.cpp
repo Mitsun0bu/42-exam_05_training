@@ -57,13 +57,15 @@ void	Warlock::learnSpell(ASpell* spell)
 
 void	Warlock::forgetSpell(std::string spellName)
 {
-	spellList.erase(spellName);
+	if (spellList.find(spellName) != spellList.end())
+		spellList.erase(spellName);
 	return ;
 }
 
 void	Warlock::launchSpell(std::string spellName, ATarget& target)
 {
-	target.getHitBySpell(*spellList[spellName]);
+	if (spellList.find(spellName) != spellList.end())
+		target.getHitBySpell(*spellList[spellName]);
 	return ;
 }
 

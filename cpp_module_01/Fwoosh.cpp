@@ -28,3 +28,9 @@ Fwoosh*	Fwoosh::clone(void)
 	Fwoosh* fwooshClone = new Fwoosh();
 	return (fwooshClone);
 }
+
+// DESTRUCTOR
+Fwoosh::~Fwoosh(void)
+{
+	return ;
+}
