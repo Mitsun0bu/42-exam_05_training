@@ -2,11 +2,12 @@
 
 // CONSTRUCTOR
 Warlock::Warlock(std::string name, std::string title):
-	name(name), title(title)
+	name(name), title(title), spellBook()
 {
 	std::cout
 	<< this->name << ": This looks like another boring day."
 	<< std::endl;
+
 	return ;
 }
 
@@ -49,23 +50,21 @@ void	Warlock::introduce(void) const
 
 void	Warlock::learnSpell(ASpell* spell)
 {
-	if (!spell)
-		return;
-	this->spellList[spell->getName()] = spell;
+	if (spell)
+		this->spellBook.learnSpell(spell);
 	return ;
 }
 
 void	Warlock::forgetSpell(std::string spellName)
 {
-	if (spellList.find(spellName) != spellList.end())
-		spellList.erase(spellName);
+	this->spellBook.forgetSpell(spellName);
 	return ;
 }
 
 void	Warlock::launchSpell(std::string spellName, ATarget& target)
 {
-	if (spellList.find(spellName) != spellList.end())
-		target.getHitBySpell(*spellList[spellName]);
+	if (this->spellBook.createSpell(spellName) != NULL)
+		target.getHitBySpell(*this->spellBook.spellList[spellName]);
 	return ;
 }
 

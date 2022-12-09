@@ -49,23 +49,22 @@ void	Warlock::introduce(void) const
 
 void	Warlock::learnSpell(ASpell* spell)
 {
-	if (!spell)
-		return;
-	this->spellList[spell->getName()] = spell;
+	if (spell)
+		this->spellList[spell->getName()] = spell;
 	return ;
 }
 
 void	Warlock::forgetSpell(std::string spellName)
 {
-	if (spellList.find(spellName) != spellList.end())
-		spellList.erase(spellName);
+	if (this->spellList.find(spellName) != this->spellList.end())
+		this->spellList.erase(spellName);
 	return ;
 }
 
 void	Warlock::launchSpell(std::string spellName, ATarget& target)
 {
-	if (spellList.find(spellName) != spellList.end())
-		target.getHitBySpell(*spellList[spellName]);
+	if (this->spellList.find(spellName) != this->spellList.end())
+		target.getHitBySpell(*this->spellList[spellName]);
 	return ;
 }
 

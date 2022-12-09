@@ -7,10 +7,12 @@
 # include <iterator>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
+# include "SpellBook.hpp"
 
 
 class ASpell;
 class ATarget;
+class SpellBook;
 
 class Warlock
 {
@@ -29,7 +31,8 @@ class Warlock
 		void		learnSpell(ASpell* spell);
 		void		forgetSpell(std::string spellName);
 		void		launchSpell(std::string spellName, ATarget& target);
-		std::map<std::string, ASpell*>	spellList;
+		// ATTRIBUTE
+		SpellBook	spellBook;
 
 	private:
 		// PRIVATE DEFAULT CONSTRUCTOR

@@ -16,20 +16,20 @@ SpellBook::~SpellBook(void)
 void	SpellBook::learnSpell(ASpell* spell)
 {
 	if (spell)
-		spellList[spell->getName()] = spell->clone();
+		this->spellList[spell->getName()] = spell->clone();
 	return ;
 }
 
 void	SpellBook::forgetSpell(std::string const & spellName)
 {
-	if (spellList.find(spellName) != spellList.end())
-		spellList.erase(spellName);
+	if (this->spellList.find(spellName) != this->spellList.end())
+		this->spellList.erase(spellName);
 	return ;
 }
 
 ASpell*	SpellBook::createSpell(std::string const & spellName)
 {
-	if (spellList.find(spellName) != spellList.end())
-		return (spellList[spellName]->clone());
+	if (this->spellList.find(spellName) != this->spellList.end())
+		return (this->spellList[spellName]->clone());
 	return (NULL);
 }
