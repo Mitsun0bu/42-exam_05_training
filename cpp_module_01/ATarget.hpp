@@ -24,7 +24,7 @@ class ATarget
 		virtual ATarget*	clone(void) = 0;
 		void				getHitBySpell(ASpell const & spell) const;
 
-	private:
+	protected:
 		// PRIVATE ATTRIBUTE
 		std::string	type;
 };
