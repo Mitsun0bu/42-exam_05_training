@@ -6,12 +6,12 @@
 class Polymorph : public ASpell
 {
 	public:
-	// CONSTRUCTOR
-				Polymorph(void);
-	// DESTRUCTOR
-				~Polymorph(void);
-	// METHODS
-	Polymorph*	clone(void);
+		// CONSTRUCTOR
+					Polymorph(void);
+		// DESTRUCTOR
+					~Polymorph(void);
+		// METHODS
+		Polymorph*	clone(void);
 };
 
 #endif

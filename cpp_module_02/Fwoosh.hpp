@@ -6,12 +6,12 @@
 class Fwoosh : public ASpell
 {
 	public:
-	// CONSTRUCTOR
-			Fwoosh(void);
-	// DESTRUCTOR
-			~Fwoosh(void);
-	// METHODS
-	Fwoosh*	clone(void);
+		// CONSTRUCTOR
+				Fwoosh(void);
+		// DESTRUCTOR
+				~Fwoosh(void);
+		// METHODS
+		Fwoosh*	clone(void);
 };
 
 #endif

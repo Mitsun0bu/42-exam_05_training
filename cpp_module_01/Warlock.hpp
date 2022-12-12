@@ -29,8 +29,6 @@ class Warlock
 		void		learnSpell(ASpell* spell);
 		void		forgetSpell(std::string spellName);
 		void		launchSpell(std::string spellName, ATarget& target);
-		// PUBLIC ATTRIBUTE
-		std::map<std::string, ASpell*>	spellList;
 
 	private:
 		// PRIVATE DEFAULT CONSTRUCTOR
@@ -42,6 +40,7 @@ class Warlock
 		// PRIVATE ATTRIBUTES
 		std::string						name;
 		std::string						title;
+		std::map<std::string, ASpell*>	spellList;
 };
 
 # endif

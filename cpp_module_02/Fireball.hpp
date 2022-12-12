@@ -6,12 +6,12 @@
 class Fireball : public ASpell
 {
 	public:
-	// CONSTRUCTOR
-				Fireball(void);
-	// DESTRUCTOR
-				~Fireball(void);
-	// METHODS
-	Fireball*	clone(void);
+		// CONSTRUCTOR
+					Fireball(void);
+		// DESTRUCTOR
+					~Fireball(void);
+		// METHODS
+		Fireball*	clone(void);
 };
 
 #endif
