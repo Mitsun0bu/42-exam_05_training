@@ -7,30 +7,14 @@ Polymorph::Polymorph(void):
 	return ;
 };
 
-// COPY CONSTRUCTOR
-Polymorph::Polymorph(Polymorph const & src)
+// DESTRUCTOR
+Polymorph::~Polymorph(void)
 {
-	*this = src;
 	return ;
-}
-
-// '=' OPERATOR OVERLAOD
-Polymorph&	Polymorph::operator=(Polymorph const & src)
-{
-	this->name = src.name;
-	this->effects = src.effects;
-	return (*this);
 }
 
 // METHOD
 Polymorph*	Polymorph::clone(void)
 {
-	Polymorph* PolymorphClone = new Polymorph(*this);
-	return (PolymorphClone);
-}
-
-// DESTRUCTOR
-Polymorph::~Polymorph(void)
-{
-	return ;
+	return (new Polymorph());
 }

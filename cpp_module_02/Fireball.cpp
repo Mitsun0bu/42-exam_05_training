@@ -7,30 +7,14 @@ Fireball::Fireball(void):
 	return ;
 };
 
-// COPY CONSTRUCTOR
-Fireball::Fireball(Fireball const & src)
+// DESTRUCTOR
+Fireball::~Fireball(void)
 {
-	*this = src;
 	return ;
-}
-
-// '=' OPERATOR OVERLAOD
-Fireball&	Fireball::operator=(Fireball const & src)
-{
-	this->name = src.name;
-	this->effects = src.effects;
-	return (*this);
 }
 
 // METHOD
 Fireball*	Fireball::clone(void)
 {
-	Fireball* fireballClone = new Fireball(*this);
-	return (fireballClone);
-}
-
-// DESTRUCTOR
-Fireball::~Fireball(void)
-{
-	return ;
+	return (new Fireball());
 }

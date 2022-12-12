@@ -8,6 +8,8 @@ Warlock::Warlock(std::string name, std::string title):
 	<< this->name << ": This looks like another boring day."
 	<< std::endl;
 
+	spellBook = new SpellBook();
+
 	return ;
 }
 
@@ -17,6 +19,8 @@ Warlock::~Warlock(void)
 	std::cout
 	<< this->name << ": My job here is done!"
 	<< std::endl;
+
+	delete spellBook;
 
 	return ;
 }
@@ -36,6 +40,7 @@ std::string	Warlock::getTitle(void) const
 void	Warlock::setTitle(const std::string& title)
 {
 	this->title = title;
+
 	return;
 }
 
@@ -46,26 +51,34 @@ void	Warlock::introduce(void) const
 	<< this->name << ": I am " << this->name
 	<< ", " << title
 	<< std::endl;
+
 	return ;
 }
 
 void	Warlock::learnSpell(ASpell* spell)
 {
 	if (spell)
-		this->spellBook.learnSpell(spell);
+		this->spellBook->learnSpell(spell);
+
 	return ;
 }
 
 void	Warlock::forgetSpell(std::string spellName)
 {
-	this->spellBook.forgetSpell(spellName);
+	this->spellBook->forgetSpell(spellName);
+
 	return ;
 }
 
 void	Warlock::launchSpell(std::string spellName, ATarget& target)
 {
-	if (this->spellBook.createSpell(spellName) != NULL)
-		target.getHitBySpell(*this->spellBook.spellList[spellName]);
+	ASpell* spell = this->spellBook->createSpell(spellName);
+
+	if (spell != nullptr)
+		target.getHitBySpell(*this->spellBook->spellList[spellName]);
+
+	delete spell;
+
 	return ;
 }
 
@@ -79,13 +92,15 @@ Warlock::Warlock(void)
 Warlock::Warlock(Warlock const & src)
 {
 	*this = src;
+
 	return ;
 }
 
 // PRIVATE '=' OPERATOR OVERLAOD
 Warlock&	Warlock::operator=(Warlock const & src)
 {
-	this->name = src.name;
-	this->title = src.title;
+	this->name	= src.name;
+	this->title	= src.title;
+
 	return (*this);
 }

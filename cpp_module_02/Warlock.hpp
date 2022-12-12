@@ -31,8 +31,6 @@ class Warlock
 		void		learnSpell(ASpell* spell);
 		void		forgetSpell(std::string spellName);
 		void		launchSpell(std::string spellName, ATarget& target);
-		// ATTRIBUTE
-		SpellBook	spellBook;
 
 	private:
 		// PRIVATE DEFAULT CONSTRUCTOR
@@ -42,8 +40,9 @@ class Warlock
 		// PRIVATE '=' OPERATOR OVERLAOD
 		Warlock&	operator=(Warlock const & src);
 		// PRIVATE ATTRIBUTES
-		std::string						name;
-		std::string						title;
+		std::string	name;
+		std::string	title;
+		SpellBook*	spellBook;
 };
 
 # endif

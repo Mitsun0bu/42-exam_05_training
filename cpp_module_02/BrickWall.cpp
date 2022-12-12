@@ -7,29 +7,14 @@ BrickWall::BrickWall(void):
 	return ;
 }
 
-// COPY CONSTRUCTOR
-BrickWall::BrickWall(BrickWall const & src)
+// METHOD
+BrickWall::~BrickWall(void)
 {
-	*this = src;
 	return ;
-}
-
-// '=' OPERATOR OVERLAOD
-BrickWall&	BrickWall::operator=(BrickWall const & src)
-{
-	this->type = src.type;
-	return (*this);
 }
 
 // METHOD
 BrickWall*	BrickWall::clone(void)
 {
-	BrickWall* BrickWallClone = new BrickWall(*this);
-	return (BrickWallClone);
-}
-
-// METHOD
-BrickWall::~BrickWall(void)
-{
-	return ;
+	return (new BrickWall());
 }

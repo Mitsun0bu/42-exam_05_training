@@ -7,30 +7,14 @@ Fwoosh::Fwoosh(void):
 	return ;
 };
 
-// COPY CONSTRUCTOR
-Fwoosh::Fwoosh(Fwoosh const & src)
+// DESTRUCTOR
+Fwoosh::~Fwoosh(void)
 {
-	*this = src;
 	return ;
-}
-
-// '=' OPERATOR OVERLAOD
-Fwoosh&	Fwoosh::operator=(Fwoosh const & src)
-{
-	this->name = src.name;
-	this->effects = src.effects;
-	return (*this);
 }
 
 // METHOD
 Fwoosh*	Fwoosh::clone(void)
 {
-	Fwoosh* fwooshClone = new Fwoosh(*this);
-	return (fwooshClone);
-}
-
-// DESTRUCTOR
-Fwoosh::~Fwoosh(void)
-{
-	return ;
+	return (new Fwoosh);
 }

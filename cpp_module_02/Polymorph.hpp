@@ -7,13 +7,9 @@ class Polymorph : public ASpell
 {
 	public:
 	// CONSTRUCTOR
-			Polymorph(void);
-	// COPY CONSTRUCTOR
-			Polymorph(Polymorph const & src);
-	// '=' OPERATOR OVERLAOD
-	Polymorph&	operator=(Polymorph const & src);
+				Polymorph(void);
 	// DESTRUCTOR
-	virtual	~Polymorph(void);
+				~Polymorph(void);
 	// METHODS
 	Polymorph*	clone(void);
 };

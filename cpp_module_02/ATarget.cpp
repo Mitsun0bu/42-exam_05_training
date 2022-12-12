@@ -17,6 +17,7 @@ ATarget::ATarget(std::string type):
 ATarget::ATarget(ATarget const & src)
 {
 	*this = src;
+
 	return ;
 }
 
@@ -24,6 +25,7 @@ ATarget::ATarget(ATarget const & src)
 ATarget&	ATarget::operator=(ATarget const & src)
 {
 	this->type = src.type;
+
 	return (*this);
 }
 
@@ -46,4 +48,6 @@ void	ATarget::getHitBySpell(ASpell const & spell) const
 	<< this->getType() << " has been "
 	<< spell.getEffects() << "!"
 	<< std::endl;
+
+	return ;
 }

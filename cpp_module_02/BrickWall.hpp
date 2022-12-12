@@ -7,13 +7,9 @@ class BrickWall : public ATarget
 {
 	public:
 		// CONSTRUCTOR
-				BrickWall(void);
-		// COPY	CONSTRUCTOR
-				BrickWall(BrickWall const & src);
-		// '=' OPERATOR OVERLAOD
-		BrickWall&	operator=(BrickWall const & src);
+					BrickWall(void);
 		// DESTRUCTOR
-		virtual	~BrickWall(void);
+					~BrickWall(void);
 		// METHOD
 		BrickWall*	clone(void);
 };

@@ -17,7 +17,7 @@ class ASpell
 		// '=' OPERATOR OVERLAOD
 		ASpell&			operator=(ASpell const & src);
 		// DESTRUCTOR
-						~ASpell(void);
+		virtual			~ASpell(void);
 		// GETTERS
 		std::string		getName(void) const;
 		std::string		getEffects(void) const;

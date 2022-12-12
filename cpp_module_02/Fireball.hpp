@@ -7,13 +7,9 @@ class Fireball : public ASpell
 {
 	public:
 	// CONSTRUCTOR
-			Fireball(void);
-	// COPY CONSTRUCTOR
-			Fireball(Fireball const & src);
-	// '=' OPERATOR OVERLAOD
-	Fireball&	operator=(Fireball const & src);
+				Fireball(void);
 	// DESTRUCTOR
-	virtual	~Fireball(void);
+				~Fireball(void);
 	// METHODS
 	Fireball*	clone(void);
 };

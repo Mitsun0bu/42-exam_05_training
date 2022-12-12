@@ -17,7 +17,7 @@ class ATarget
 		// '=' OPERATOR OVERLAOD
 		ATarget&			operator=(ATarget const & src);
 		// DESTRUCTOR
-							~ATarget(void);
+		virtual				~ATarget(void);
 		// GETTER
 		const std::string&	getType(void) const;
 		// METHODS
